@@ -237,7 +237,7 @@ class MianCollectionCollectionViewController: UICollectionViewController, UINavi
                         }
 
                         for index in 0..<forumUrl.count {
-                            let temp = DevilItem()
+                            let temp = EvilItem()
                             temp.imageUrl = imageUrl[index + 37]
                             temp.forumUrl = forumUrl[index]
                             temp.title    = title[index]
@@ -270,14 +270,14 @@ class MianCollectionCollectionViewController: UICollectionViewController, UINavi
     
     //点击显示大图
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier("ShowPhoto", sender: (self.photos.objectAtIndex(indexPath.item) as! DevilItem))
+        performSegueWithIdentifier("ShowPhoto", sender: (self.photos.objectAtIndex(indexPath.item) as! EvilItem))
     }
     
     //给browser页面设置数据
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowPhoto"{
             let temp = segue.destinationViewController as! ShowCollectionViewController
-            temp.photoInfo = sender as! DevilItem
+            temp.photoInfo = sender as! EvilItem
         }
     }
     
@@ -303,7 +303,7 @@ class MianCollectionCollectionViewController: UICollectionViewController, UINavi
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! MainCollectionViewCell
         
-        let item = photos.objectAtIndex(indexPath.row) as! DevilItem
+        let item = photos.objectAtIndex(indexPath.row) as! EvilItem
         let imageURL = NSURL(string: item.imageUrl)
         //复用时先置为nil，使其不显示原有图片
         print(imageURL)

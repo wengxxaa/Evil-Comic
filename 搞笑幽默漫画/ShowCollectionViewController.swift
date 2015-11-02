@@ -47,7 +47,7 @@ class ShowCollectionViewController: UICollectionViewController, UICollectionView
     var populatingPhotos = false //是否在获取图片
     var currentPage = 1 //当前页数
     var urlCut = "" //forum id
-    var photoInfo: DevilItem = DevilItem() //保存图片信息
+    var photoInfo: EvilItem = EvilItem() //保存图片信息
     
     override func viewDidLoad() {
         super.viewDidLoad()

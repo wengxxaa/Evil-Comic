@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DevilItem: NSObject {
+class EvilItem: NSObject {
     //存放图片信息的类
     var forumUrl: String = ""
     var imageUrl: String = ""

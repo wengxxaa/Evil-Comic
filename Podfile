@@ -5,3 +5,9 @@ pod 'Kanna'
 pod 'Alamofire', '~> 2.0'
 pod 'SDWebImage', '~>3.7'
 pod 'JGProgressHUD'
+pod 'SQLite.swift',
+git: 'https://github.com/stephencelis/SQLite.swift.git'
+
+# instead, for SQLCipher support
+pod 'SQLiteCipher.swift',
+git: 'https://github.com/stephencelis/SQLite.swift.git'

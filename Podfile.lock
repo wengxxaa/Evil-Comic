@@ -6,6 +6,14 @@ PODS:
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
+  - SQLCipher (3.1.0):
+    - SQLCipher/standard (= 3.1.0)
+  - SQLCipher/common (3.1.0)
+  - SQLCipher/standard (3.1.0):
+    - SQLCipher/common
+  - SQLite.swift (1.0.0)
+  - SQLiteCipher.swift (1.0.0):
+    - SQLCipher
 
 DEPENDENCIES:
   - Alamofire (~> 2.0)
@@ -13,6 +21,22 @@ DEPENDENCIES:
   - Kanna
   - MBProgressHUD (~> 0.9.1)
   - SDWebImage (~> 3.7)
+  - SQLite.swift (from `https://github.com/stephencelis/SQLite.swift.git`)
+  - SQLiteCipher.swift (from `https://github.com/stephencelis/SQLite.swift.git`)
+
+EXTERNAL SOURCES:
+  SQLite.swift:
+    :git: https://github.com/stephencelis/SQLite.swift.git
+  SQLiteCipher.swift:
+    :git: https://github.com/stephencelis/SQLite.swift.git
+
+CHECKOUT OPTIONS:
+  SQLite.swift:
+    :commit: c9d3082d1f5ddc2e55a792a8eb1a677b8a1b15f5
+    :git: https://github.com/stephencelis/SQLite.swift.git
+  SQLiteCipher.swift:
+    :commit: c9d3082d1f5ddc2e55a792a8eb1a677b8a1b15f5
+    :git: https://github.com/stephencelis/SQLite.swift.git
 
 SPEC CHECKSUMS:
   Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
@@ -20,5 +44,8 @@ SPEC CHECKSUMS:
   Kanna: 059afb193a9f8ea34f46cb55a8b11bf4257efad8
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  SQLCipher: c44fcca49c31483c2489cfb79aa7a69407f3794a
+  SQLite.swift: 3bb75f5a650f08673276bc6d3fb1de1b542b8f4d
+  SQLiteCipher.swift: 6405d3937f6afc94614949336fd1fdefa37428b5
 
-COCOAPODS: 0.39.0.beta.4
+COCOAPODS: 0.39.0

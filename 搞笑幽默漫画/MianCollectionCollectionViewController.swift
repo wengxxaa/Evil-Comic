@@ -231,7 +231,7 @@ class MianCollectionCollectionViewController: UICollectionViewController, UINavi
 //                                    print("forumurl: \(node["href"])")
                                     forumUrl.append(node["href"]!)
                                     title.append(node["title"]!)
-                                    print(node["title"]!)
+//                                    print(node["title"]!)
                                 }
                             }
                         }
@@ -240,7 +240,8 @@ class MianCollectionCollectionViewController: UICollectionViewController, UINavi
                             let temp = EvilItem()
                             temp.imageUrl = imageUrl[index + 37]
                             temp.forumUrl = forumUrl[index]
-                            temp.title    = title[index]
+//                            temp.title    = title[index]
+                            temp.title = "邪恶漫画"
                             self.photos.addObject(temp)
                         }
 
@@ -270,6 +271,16 @@ class MianCollectionCollectionViewController: UICollectionViewController, UINavi
     
     //点击显示大图
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let item = photos.objectAtIndex(indexPath.row) as! EvilItem
+        let data = NSData(contentsOfURL: NSURL(string: item.imageUrl)!)
+        let record = DbRecordItem(url: item.forumUrl, image: data!, title: item.title)
+        let array = DbRecord.getInstance().getAllItems()
+        if array == nil{
+            DbRecord.getInstance().insertItem(record)
+        }else{
+            DbRecord.getInstance().updateItemByIndex(record)
+        }
+        
         performSegueWithIdentifier("ShowPhoto", sender: (self.photos.objectAtIndex(indexPath.item) as! EvilItem))
     }
     
@@ -306,7 +317,7 @@ class MianCollectionCollectionViewController: UICollectionViewController, UINavi
         let item = photos.objectAtIndex(indexPath.row) as! EvilItem
         let imageURL = NSURL(string: item.imageUrl)
         //复用时先置为nil，使其不显示原有图片
-        print(imageURL)
+//        print(imageURL)
         cell.imageView.image = nil
         
         //用sdwebimage更加的方便，集成了cache，弃用原来的。。

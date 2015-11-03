@@ -26,6 +26,7 @@
 		890086B11BE4FC96006619C5 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8900869C1BE4FC96006619C5 /* UIScrollView+MJExtension.m */; };
 		890086B21BE4FC96006619C5 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 8900869E1BE4FC96006619C5 /* UIScrollView+MJRefresh.m */; };
 		890086B31BE4FC96006619C5 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 890086A01BE4FC96006619C5 /* UIView+MJExtension.m */; };
+		89376BB71BE8DAFC005EA250 /* DbRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89376BB61BE8DAFC005EA250 /* DbRecord.swift */; };
 		899FD4641BE47F3700E29F1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD4631BE47F3700E29F1F /* AppDelegate.swift */; };
 		899FD4691BE47F3700E29F1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899FD4671BE47F3700E29F1F /* Main.storyboard */; };
 		899FD46C1BE47F3700E29F1F /* ______.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 899FD46A1BE47F3700E29F1F /* ______.xcdatamodeld */; };
@@ -37,7 +38,7 @@
 		899FD49B1BE483CF00E29F1F /* MianCollectionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD49A1BE483CF00E29F1F /* MianCollectionCollectionViewController.swift */; };
 		899FD49D1BE4897800E29F1F /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD49C1BE4897800E29F1F /* HistoryTableViewController.swift */; };
 		899FD49F1BE4898600E29F1F /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD49E1BE4898600E29F1F /* SettingTableViewController.swift */; };
-		899FD4A11BE48A9B00E29F1F /* DevilItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD4A01BE48A9B00E29F1F /* DevilItem.swift */; };
+		899FD4A11BE48A9B00E29F1F /* EvilItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD4A01BE48A9B00E29F1F /* EvilItem.swift */; };
 		899FD4B01BE48CE600E29F1F /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD4A51BE48CE600E29F1F /* RAMBounceAnimation.swift */; };
 		899FD4B11BE48CE600E29F1F /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD4A71BE48CE600E29F1F /* RAMFrameItemAnimation.swift */; };
 		899FD4B21BE48CE600E29F1F /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD4A91BE48CE600E29F1F /* RAMFumeAnimation.swift */; };
@@ -46,7 +47,7 @@
 		899FD4B51BE48CE600E29F1F /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD4AE1BE48CE600E29F1F /* RAMAnimatedTabBarController.swift */; };
 		899FD4B61BE48CE600E29F1F /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD4AF1BE48CE600E29F1F /* RAMItemAnimationProtocol.swift */; };
 		89DBB76A1BE5B70C00EA4AEB /* ShowCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBB7691BE5B70C00EA4AEB /* ShowCollectionViewController.swift */; };
-		96A3FFC128E04646123EB40C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572FFFFD80A83922FC5ABCB4 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		96A3FFC128E04646123EB40C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572FFFFD80A83922FC5ABCB4 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		8900869F1BE4FC96006619C5 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		890086A01BE4FC96006619C5 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		890086B41BE4FD71006619C5 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		89376BB61BE8DAFC005EA250 /* DbRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DbRecord.swift; sourceTree = "<group>"; };
 		899FD4601BE47F3700E29F1F /* 搞笑幽默漫画.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "搞笑幽默漫画.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		899FD4631BE47F3700E29F1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		899FD4681BE47F3700E29F1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -126,7 +128,7 @@
 		899FD49A1BE483CF00E29F1F /* MianCollectionCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MianCollectionCollectionViewController.swift; sourceTree = "<group>"; };
 		899FD49C1BE4897800E29F1F /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		899FD49E1BE4898600E29F1F /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
-		899FD4A01BE48A9B00E29F1F /* DevilItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevilItem.swift; sourceTree = "<group>"; };
+		899FD4A01BE48A9B00E29F1F /* EvilItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvilItem.swift; sourceTree = "<group>"; };
 		899FD4A51BE48CE600E29F1F /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMBounceAnimation.swift; sourceTree = "<group>"; };
 		899FD4A71BE48CE600E29F1F /* RAMFrameItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFrameItemAnimation.swift; sourceTree = "<group>"; };
 		899FD4A91BE48CE600E29F1F /* RAMFumeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFumeAnimation.swift; sourceTree = "<group>"; };
@@ -326,7 +328,8 @@
 		899FD4941BE47F9200E29F1F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				899FD4A01BE48A9B00E29F1F /* DevilItem.swift */,
+				89376BB61BE8DAFC005EA250 /* DbRecord.swift */,
+				899FD4A01BE48A9B00E29F1F /* EvilItem.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -624,7 +627,7 @@
 				899FD4B61BE48CE600E29F1F /* RAMItemAnimationProtocol.swift in Sources */,
 				890086A71BE4FC96006619C5 /* MJRefreshAutoNormalFooter.m in Sources */,
 				899FD49D1BE4897800E29F1F /* HistoryTableViewController.swift in Sources */,
-				899FD4A11BE48A9B00E29F1F /* DevilItem.swift in Sources */,
+				899FD4A11BE48A9B00E29F1F /* EvilItem.swift in Sources */,
 				890086A21BE4FC96006619C5 /* MJRefreshBackFooter.m in Sources */,
 				890086A41BE4FC96006619C5 /* MJRefreshFooter.m in Sources */,
 				899FD4B11BE48CE600E29F1F /* RAMFrameItemAnimation.swift in Sources */,
@@ -636,6 +639,7 @@
 				890086A11BE4FC96006619C5 /* MJRefreshAutoFooter.m in Sources */,
 				890086B11BE4FC96006619C5 /* UIScrollView+MJExtension.m in Sources */,
 				890086B31BE4FC96006619C5 /* UIView+MJExtension.m in Sources */,
+				89376BB71BE8DAFC005EA250 /* DbRecord.swift in Sources */,
 				899FD4B01BE48CE600E29F1F /* RAMBounceAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

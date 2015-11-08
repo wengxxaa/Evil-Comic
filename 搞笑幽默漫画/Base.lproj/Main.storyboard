@@ -216,10 +216,10 @@ https://github.com/luzefeng/Evil-Comic</string>
             </objects>
             <point key="canvasLocation" x="1359" y="541"/>
         </scene>
-        <!--Show Collection View Controller-->
+        <!--Show-->
         <scene sceneID="dae-SM-YjM">
             <objects>
-                <collectionViewController id="oqE-SM-7sT" customClass="ShowCollectionViewController" customModule="搞笑幽默漫画" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="oqE-SM-7sT" userLabel="Show" customClass="ShowCollectionViewController" customModule="搞笑幽默漫画" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="lcY-dO-kmx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -249,7 +249,7 @@ https://github.com/luzefeng/Evil-Comic</string>
                             <outlet property="delegate" destination="oqE-SM-7sT" id="yfp-AS-ekf"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="Rrg-Fo-IEs"/>
+                    <navigationItem key="navigationItem" title="Hell" id="Rrg-Fo-IEs"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvM-q6-liX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -302,7 +302,7 @@ https://github.com/luzefeng/Evil-Comic</string>
             </objects>
             <point key="canvasLocation" x="-155" y="302"/>
         </scene>
-        <!--书橱-->
+        <!--最近浏览-->
         <scene sceneID="mXi-r7-1t0">
             <objects>
                 <collectionViewController id="NBW-A4-BCg" customClass="HistoryCollectionViewController" customModule="搞笑幽默漫画" customModuleProvider="target" sceneMemberID="viewController">
@@ -334,11 +334,12 @@ https://github.com/luzefeng/Evil-Comic</string>
                             <outlet property="delegate" destination="NBW-A4-BCg" id="Hvu-bf-2FL"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="书橱" image="Group" id="XEx-ri-00y" customClass="RAMAnimatedTabBarItem" customModule="搞笑幽默漫画" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="最近浏览" image="Group" id="XEx-ri-00y" customClass="RAMAnimatedTabBarItem" customModule="搞笑幽默漫画" customModuleProvider="target">
                         <connections>
                             <outlet property="animation" destination="lEv-8h-ZZx" id="EaA-F3-RX5"/>
                         </connections>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" title="最近浏览" id="r6p-H4-OHC"/>
                     <connections>
                         <segue destination="oqE-SM-7sT" kind="push" identifier="ShowDetail" id="bh4-gP-sXe"/>
                     </connections>
@@ -364,6 +365,6 @@ https://github.com/luzefeng/Evil-Comic</string>
         <image name="Setting" width="25" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AAL-Uc-Wr7"/>
+        <segue reference="bh4-gP-sXe"/>
     </inferredMetricsTieBreakers>
 </document>

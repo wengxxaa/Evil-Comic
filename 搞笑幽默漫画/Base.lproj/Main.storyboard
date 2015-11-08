@@ -249,7 +249,7 @@ https://github.com/luzefeng/Evil-Comic</string>
                             <outlet property="delegate" destination="oqE-SM-7sT" id="yfp-AS-ekf"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Hell" id="Rrg-Fo-IEs"/>
+                    <navigationItem key="navigationItem" id="Rrg-Fo-IEs"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvM-q6-liX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

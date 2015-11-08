@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--主页-->
@@ -43,11 +44,7 @@
                             <outlet property="animation" destination="srD-dh-sHo" id="JEx-ao-4eG"/>
                         </connections>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" title="主页" id="rH2-bi-veb">
-                        <connections>
-                            <outlet property="titleView" destination="kmV-qN-0g6" id="etL-b9-QXu"/>
-                        </connections>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="主页" id="rH2-bi-veb"/>
                     <connections>
                         <segue destination="oqE-SM-7sT" kind="push" identifier="ShowPhoto" id="AAL-Uc-Wr7"/>
                     </connections>
@@ -70,17 +67,18 @@
         <scene sceneID="tzj-qR-diK">
             <objects>
                 <tableViewController id="TiL-k0-IKN" customClass="SettingTableViewController" customModule="搞笑幽默漫画" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="100" sectionFooterHeight="28" id="rYD-mE-OGq">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="grouped" allowsSelectionDuringEditing="YES" rowHeight="50" sectionHeaderHeight="18" sectionFooterHeight="18" id="rYD-mE-OGq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" white="0.89662554389552063" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <sections>
                             <tableViewSection id="ZjB-Lh-umw">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5WE-lI-Bkg">
-                                        <rect key="frame" x="0.0" y="64" width="600" height="50"/>
+                                        <rect key="frame" x="0.0" y="99" width="600" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5WE-lI-Bkg" id="ECV-Sq-ghF">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
@@ -93,8 +91,8 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Setting" translatesAutoresizingMaskIntoConstraints="NO" id="3gJ-gi-cQK">
-                                                    <rect key="frame" x="0.0" y="-1" width="47" height="52"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Setting" translatesAutoresizingMaskIntoConstraints="NO" id="3gJ-gi-cQK">
+                                                    <rect key="frame" x="8" y="9" width="28" height="31"/>
                                                     <animations/>
                                                 </imageView>
                                             </subviews>
@@ -103,7 +101,7 @@
                                         <animations/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="4Cu-vo-sTH">
-                                        <rect key="frame" x="0.0" y="114" width="600" height="50"/>
+                                        <rect key="frame" x="0.0" y="149" width="600" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Cu-vo-sTH" id="AWN-xe-l23">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
@@ -116,16 +114,20 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Setting" translatesAutoresizingMaskIntoConstraints="NO" id="TBp-Os-LS5">
+                                                    <rect key="frame" x="8" y="9" width="28" height="31"/>
+                                                    <animations/>
+                                                </imageView>
                                             </subviews>
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LP5-CH-vBd">
-                                        <rect key="frame" x="0.0" y="164" width="600" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="LP5-CH-vBd">
+                                        <rect key="frame" x="0.0" y="199" width="600" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LP5-CH-vBd" id="mFX-f0-kVW">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="意见反馈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6g-eY-4jQ">
@@ -135,10 +137,17 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Setting" translatesAutoresizingMaskIntoConstraints="NO" id="ZSh-Yl-d0d">
+                                                    <rect key="frame" x="8" y="9" width="28" height="31"/>
+                                                    <animations/>
+                                                </imageView>
                                             </subviews>
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <segue destination="whF-EM-SHa" kind="push" identifier="About" id="26O-tD-P4v"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -168,7 +177,46 @@
             </objects>
             <point key="canvasLocation" x="705" y="541"/>
         </scene>
-        <!--wwww-->
+        <!--View Controller-->
+        <scene sceneID="sWN-bf-X0u">
+            <objects>
+                <viewController id="whF-EM-SHa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PCS-rX-obm"/>
+                        <viewControllerLayoutGuide type="bottom" id="fem-HF-94e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wwo-qZ-PPJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ygz-ks-x9p">
+                                <rect key="frame" x="38" y="106" width="362" height="305"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Xcode 7.1 Swift 2.0
+从网络抓取的邪恶漫画，分享一下
+如有问题，请在我的个人github上留言：
+https://github.com/luzefeng/Evil-Comic</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ygz-ks-x9p" firstAttribute="leading" secondItem="wwo-qZ-PPJ" secondAttribute="leadingMargin" constant="20" id="6gC-pI-r8t"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ygz-ks-x9p" secondAttribute="trailing" constant="20" id="BgM-H3-djP"/>
+                            <constraint firstItem="fem-HF-94e" firstAttribute="top" secondItem="Ygz-ks-x9p" secondAttribute="bottom" constant="20" id="Kzt-5f-kGW"/>
+                            <constraint firstItem="Ygz-ks-x9p" firstAttribute="top" secondItem="PCS-rX-obm" secondAttribute="bottom" constant="20" id="VW8-Hw-1q5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="too-uK-qob"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K79-t3-ZuV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1359" y="541"/>
+        </scene>
+        <!--Show Collection View Controller-->
         <scene sceneID="dae-SM-YjM">
             <objects>
                 <collectionViewController id="oqE-SM-7sT" customClass="ShowCollectionViewController" customModule="搞笑幽默漫画" customModuleProvider="target" sceneMemberID="viewController">
@@ -201,7 +249,7 @@
                             <outlet property="delegate" destination="oqE-SM-7sT" id="yfp-AS-ekf"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="wwww" id="Rrg-Fo-IEs"/>
+                    <navigationItem key="navigationItem" id="Rrg-Fo-IEs"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvM-q6-liX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -211,6 +259,7 @@
         <scene sceneID="u7x-WA-h2M">
             <objects>
                 <navigationController id="287-yf-Xkm" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mgo-iE-rZz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -245,7 +294,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Yqz-Jb-a9V" kind="relationship" relationship="viewControllers" id="CbC-p3-052"/>
-                        <segue destination="oqP-V0-rY0" kind="relationship" relationship="viewControllers" id="GoT-sR-aUQ"/>
+                        <segue destination="NBW-A4-BCg" kind="relationship" relationship="viewControllers" id="vAi-2l-CW4"/>
                         <segue destination="TiL-k0-IKN" kind="relationship" relationship="viewControllers" id="f5E-Rv-QtQ"/>
                     </connections>
                 </tabBarController>
@@ -254,41 +303,48 @@
             <point key="canvasLocation" x="-155" y="302"/>
         </scene>
         <!--书橱-->
-        <scene sceneID="nGO-VH-c5l">
+        <scene sceneID="mXi-r7-1t0">
             <objects>
-                <tableViewController id="oqP-V0-rY0" customClass="HistoryTableViewController" customModule="搞笑幽默漫画" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="HHA-Am-itv">
+                <collectionViewController id="NBW-A4-BCg" customClass="HistoryCollectionViewController" customModule="搞笑幽默漫画" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="vEv-xd-rJd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="WuV-t8-bCU" customClass="HisTableViewCell" customModule="搞笑幽默漫画" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="100"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WuV-t8-bCU" id="V5J-dx-fk7">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jPN-RM-wdb">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xlv-AR-HQe">
+                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
-                                </tableViewCellContentView>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
                                 <animations/>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
+                            </collectionViewCell>
+                        </cells>
                         <connections>
-                            <outlet property="dataSource" destination="oqP-V0-rY0" id="aM6-hh-Yya"/>
-                            <outlet property="delegate" destination="oqP-V0-rY0" id="ASw-CJ-f1K"/>
+                            <outlet property="dataSource" destination="NBW-A4-BCg" id="JBK-Qy-Y4l"/>
+                            <outlet property="delegate" destination="NBW-A4-BCg" id="Hvu-bf-2FL"/>
                         </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="书橱" image="Group" id="ApE-Fz-fVi" customClass="RAMAnimatedTabBarItem" customModule="搞笑幽默漫画" customModuleProvider="target">
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="书橱" image="Group" id="XEx-ri-00y" customClass="RAMAnimatedTabBarItem" customModule="搞笑幽默漫画" customModuleProvider="target">
                         <connections>
-                            <outlet property="animation" destination="MPj-b3-QDP" id="QeD-ID-2jj"/>
+                            <outlet property="animation" destination="lEv-8h-ZZx" id="EaA-F3-RX5"/>
                         </connections>
                     </tabBarItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dzv-lW-pYH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="MPj-b3-QDP" customClass="RAMFlipLeftTransitionItemAniamtions" customModule="搞笑幽默漫画" customModuleProvider="target">
+                    <connections>
+                        <segue destination="oqE-SM-7sT" kind="push" identifier="ShowDetail" id="bh4-gP-sXe"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YL6-BL-SJY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="lEv-8h-ZZx" customClass="RAMFlipLeftTransitionItemAniamtions" customModule="搞笑幽默漫画" customModuleProvider="target">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
                             <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -299,7 +355,7 @@
                     </userDefinedRuntimeAttributes>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="17" y="1034"/>
+            <point key="canvasLocation" x="26" y="974"/>
         </scene>
     </scenes>
     <resources>
@@ -307,4 +363,7 @@
         <image name="Home" width="25" height="25"/>
         <image name="Setting" width="25" height="24"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="AAL-Uc-Wr7"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -47,7 +47,7 @@ class ShowCollectionViewController: UICollectionViewController, UICollectionView
     var populatingPhotos = false //是否在获取图片
     var currentPage = 1 //当前页数
     var urlCut = "" //forum id
-    var photoInfo: EvilItem = EvilItem() //保存图片信息
+    var photoInfo: EvilItem = EvilItem(forumUrl: "", imageUrl: nil, title: nil) //保存图片信息
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -205,6 +205,7 @@ class ShowCollectionViewController: UICollectionViewController, UICollectionView
         populatingPhotos = true
         
         let pageUrl = getPageUrl()
+        print("pageurl = \(pageUrl)")
         Alamofire.request(.GET, pageUrl).validate().responseString{
             (request, response, result) in
             let isSuccess = result.isSuccess
@@ -215,17 +216,22 @@ class ShowCollectionViewController: UICollectionViewController, UICollectionView
                         CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingASCII)
                         let lastItem = self.photos.count
                         var imageUrl = [String]()
+                        var isGot = false
                         for node in doc.css("img"){
+                            print(node["src"])
                             if self.checkImageUrl(node["src"]){
                                 imageUrl.append(node["src"]!)
+                                isGot = true
                             }
                         }
-                        self.photos.addObject(imageUrl[25])
-                        let indexPaths = (lastItem..<self.photos.count).map { NSIndexPath(forItem: $0, inSection: 0) }
-                        dispatch_async(dispatch_get_main_queue()) {
+                        if isGot{
+                            self.photos.addObject(imageUrl[25])
+                            let indexPaths = (lastItem..<self.photos.count).map { NSIndexPath(forItem: $0, inSection: 0) }
+                            dispatch_async(dispatch_get_main_queue()) {
                             self.collectionView!.insertItemsAtIndexPaths(indexPaths)
                         }
                         self.currentPage++
+                        }
                     }
                 }
             }

@@ -46,6 +46,7 @@
 		899FD4B41BE48CE600E29F1F /* RAMTransitionItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD4AD1BE48CE600E29F1F /* RAMTransitionItemAnimation.swift */; };
 		899FD4B51BE48CE600E29F1F /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD4AE1BE48CE600E29F1F /* RAMAnimatedTabBarController.swift */; };
 		899FD4B61BE48CE600E29F1F /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD4AF1BE48CE600E29F1F /* RAMItemAnimationProtocol.swift */; };
+		89AE30AA1BEF14CD000D2B10 /* HistoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AE30A91BEF14CD000D2B10 /* HistoryCollectionViewController.swift */; };
 		89DBB76A1BE5B70C00EA4AEB /* ShowCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DBB7691BE5B70C00EA4AEB /* ShowCollectionViewController.swift */; };
 		96A3FFC128E04646123EB40C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572FFFFD80A83922FC5ABCB4 /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -136,6 +137,7 @@
 		899FD4AD1BE48CE600E29F1F /* RAMTransitionItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMTransitionItemAnimation.swift; sourceTree = "<group>"; };
 		899FD4AE1BE48CE600E29F1F /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
 		899FD4AF1BE48CE600E29F1F /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
+		89AE30A91BEF14CD000D2B10 /* HistoryCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCollectionViewController.swift; sourceTree = "<group>"; };
 		89DBB7691BE5B70C00EA4AEB /* ShowCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -342,6 +344,7 @@
 				899FD49A1BE483CF00E29F1F /* MianCollectionCollectionViewController.swift */,
 				899FD49C1BE4897800E29F1F /* HistoryTableViewController.swift */,
 				899FD49E1BE4898600E29F1F /* SettingTableViewController.swift */,
+				89AE30A91BEF14CD000D2B10 /* HistoryCollectionViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -628,6 +631,7 @@
 				890086A71BE4FC96006619C5 /* MJRefreshAutoNormalFooter.m in Sources */,
 				899FD49D1BE4897800E29F1F /* HistoryTableViewController.swift in Sources */,
 				899FD4A11BE48A9B00E29F1F /* EvilItem.swift in Sources */,
+				89AE30AA1BEF14CD000D2B10 /* HistoryCollectionViewController.swift in Sources */,
 				890086A21BE4FC96006619C5 /* MJRefreshBackFooter.m in Sources */,
 				890086A41BE4FC96006619C5 /* MJRefreshFooter.m in Sources */,
 				899FD4B11BE48CE600E29F1F /* RAMFrameItemAnimation.swift in Sources */,

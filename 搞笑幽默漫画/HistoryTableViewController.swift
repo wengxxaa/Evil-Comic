@@ -128,8 +128,10 @@ class HistoryTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! HisTableViewCell
-
+        let height = self.view.frame.height/3
+        let width = self.view.frame.width
         cell.imageView?.image = UIImage(data: recordItem!.imageData)
+        cell.imageView?.frame = CGRect(x: 5, y: 5, width: (height - 10)/140*190, height: height - 10)
         cell.title.text = recordItem!.title
         
         return cell

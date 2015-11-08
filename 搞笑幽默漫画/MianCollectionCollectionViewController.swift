@@ -105,21 +105,21 @@ class MianCollectionCollectionViewController: UICollectionViewController, UINavi
 
     func setupView() {
         //设置标题
-//        self.navigationItem.title = self.menuView.titles[0] as String
+        self.navigationItem.title = "ddd"
         
         self.collectionView?.scrollsToTop = true
-        let title = UILabel(frame: (self.navigationController?.navigationBar.frame)!)
-        title.textColor = UIColor.blackColor()
-        title.backgroundColor = UIColor.clearColor()
-        title.textAlignment = NSTextAlignment.Center
-        title.text = "aaa"
-        title.font = UIFont(name: "Helvetica-Bold", size: CGFloat(20))
+//        let title = UILabel(frame: (self.navigationController?.navigationBar.frame)!)
+//        title.textColor = UIColor.blackColor()
+//        title.backgroundColor = UIColor.clearColor()
+//        title.textAlignment = NSTextAlignment.Center
+//        title.text = "aaa"
+//        title.font = UIFont(name: "Helvetica-Bold", size: CGFloat(20))
 //        title.font = [UIFont fontWithName:@"Helvetica-Bold" size:20];
-        self.navigationItem.titleView = title
+//        self.navigationItem.titleView = title
 
 //        self.navigationController?.title = "aaa"
 //        self.title = "aaaa"
-        self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
 
 //        self.view.addSubview(navigationBar)
         //设置flowlayout
@@ -128,7 +128,8 @@ class MianCollectionCollectionViewController: UICollectionViewController, UINavi
 //        layout.headerReferenceSize = CGSize(width: self.view.frame.width, height: UIApplication.sharedApplication().statusBarFrame.height)
         
         collectionView!.collectionViewLayout = layout
-        collectionView!.backgroundColor = UIColor(red: 217/250, green: 218/250, blue: 223/250, alpha: 1.0)
+//        collectionView!.backgroundColor = UIColor(red: 217/250, green: 218/250, blue: 223/250, alpha: 1.0)
+        collectionView?.backgroundColor = UIColor.backColor()
         self.collectionView!.registerClass(MainCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
     //下拉刷新回调函数
@@ -179,6 +180,13 @@ class MianCollectionCollectionViewController: UICollectionViewController, UINavi
 //    NSString *retStr = [[NSString alloc] initWithData:data encoding:enc];
 //    
 //    return retStr;
+    }
+    
+    func gb2312ToUtf8(src: String)-> String?{
+        let enc = CFStringConvertEncodingToNSStringEncoding(0x0630)
+        let dest = String(CString: src, encoding: enc)
+        
+        return dest
     }
     
     //获取信息
@@ -237,11 +245,13 @@ class MianCollectionCollectionViewController: UICollectionViewController, UINavi
                         }
 
                         for index in 0..<forumUrl.count {
-                            let temp = EvilItem()
-                            temp.imageUrl = imageUrl[index + 37]
-                            temp.forumUrl = forumUrl[index]
+                            let temp = EvilItem(forumUrl: forumUrl[index], imageUrl: imageUrl[index + 37], title: "邪恶漫画")
+//                            temp.imageUrl = imageUrl[index + 37]
+//                            temp.forumUrl = forumUrl[index]
 //                            temp.title    = title[index]
-                            temp.title = "邪恶漫画"
+//                            temp.title = "邪恶漫画"
+                            let str = self.gb2312ToUtf8(title[index])
+                            print(str)
                             self.photos.addObject(temp)
                         }
 
@@ -272,7 +282,9 @@ class MianCollectionCollectionViewController: UICollectionViewController, UINavi
     //点击显示大图
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let item = photos.objectAtIndex(indexPath.row) as! EvilItem
-        let data = NSData(contentsOfURL: NSURL(string: item.imageUrl)!)
+//        let data = NSData(contentsOfURL: NSURL(string: item.imageUrl!)!)
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! MainCollectionViewCell
+        let data = UIImageJPEGRepresentation(cell.imageView.image!, 1)
         let record = DbRecordItem(url: item.forumUrl, image: data!, title: item.title)
         let array = DbRecord.getInstance().getAllItems()
         if array == nil{
@@ -315,7 +327,7 @@ class MianCollectionCollectionViewController: UICollectionViewController, UINavi
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! MainCollectionViewCell
         
         let item = photos.objectAtIndex(indexPath.row) as! EvilItem
-        let imageURL = NSURL(string: item.imageUrl)
+        let imageURL = NSURL(string: item.imageUrl!)
         //复用时先置为nil，使其不显示原有图片
 //        print(imageURL)
         cell.imageView.image = nil

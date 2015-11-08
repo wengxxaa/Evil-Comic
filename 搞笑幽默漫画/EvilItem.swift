@@ -7,12 +7,23 @@
 //
 
 import UIKit
+extension UIColor{
+    class func backColor()-> UIColor{
+        return UIColor(red: 239/255, green: 239/255, blue: 244/255, alpha: 1.0)
+    }
+}
 
 class EvilItem: NSObject {
     //存放图片信息的类
-    var forumUrl: String = ""
-    var imageUrl: String = ""
-    var title: String    = ""
+    var forumUrl: String
+    var imageUrl: String?
+    var title: String?
+    
+    init(forumUrl: String, imageUrl: String?, title: String?) {
+        self.forumUrl = forumUrl
+        self.imageUrl = imageUrl
+        self.title = title
+    }
 }
 
 enum Router {//必须实现URLRequestConvertible

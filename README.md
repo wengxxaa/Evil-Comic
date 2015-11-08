@@ -4,6 +4,8 @@
 
 使用框架:Alamofire, SDWebImage, JGProgressHUD, MBProgressHUD, Kanna, MJRefresh
 
+可以参考tabbarcontroller，collectionviewcontroller，也有上下拉刷新等等知识点
+
 现在开源出来，希望能能帮助到别人，代码有不尽如人意的地方，希望多多提意见。
 
 ##预览

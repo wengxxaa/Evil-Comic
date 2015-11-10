@@ -10,3 +10,6 @@
 
 ##预览
 ![](https://github.com/luzefeng/Evil-Comic/blob/master/evil.gif)
+
+#License
+MIT license. 
